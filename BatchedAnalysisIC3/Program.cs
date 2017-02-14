@@ -15,8 +15,8 @@ namespace BatchedAnalysisIC3
 
         //remote server
         static String puttypath = "d:/putty-0.65cn";
-        static String remoteusername = "yangxy";
-        static String remotepassword = "123456";
+        static String remoteusername = "";
+        static String remotepassword = "";
         static String remoteip = "192.168.130.28";
         static String remoteport = "22";
         static String remotepath = "/home/yangxy/example";
@@ -29,6 +29,12 @@ namespace BatchedAnalysisIC3
         static Boolean TESTMODE = true;//just test one app in test mode
         static void Main(string[] args)
         {
+            Console.WriteLine("remote user name:");
+            remoteusername = Console.ReadLine();
+            Console.WriteLine("remote password:");
+            remotepassword = Console.ReadLine();
+
+
             Console.WriteLine(Distribute(sourcepath));
 
 
